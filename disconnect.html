@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="How to revoke AR's QuickBooks Online connection and handle retained local records.">
+  <title>AR — Disconnect</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; }
+    body { margin: 0; background: #fafaf8; color: #242824; }
+    main { max-width: 740px; margin: 0 auto; padding: 64px 24px 80px; }
+    .brand { font-size: .85rem; font-weight: 700; letter-spacing: .16em; color: #426047; }
+    h1 { line-height: 1.2; font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { font-size: 1.15rem; margin-top: 32px; }
+    a { color: #315d3c; text-underline-offset: .2em; }
+    footer { margin-top: 48px; border-top: 1px solid #cbd2c9; padding-top: 20px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #171b18; color: #e6ebe5; }
+      .brand, a { color: #a9cfaf; }
+      footer { border-color: #3d493f; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">AR / DAVIDSON.LLC</div>
+    <h1>Disconnect from QuickBooks</h1>
+    <p>Visiting this page does not revoke access and does not confirm a disconnection. Use QuickBooks' connected-app controls to revoke the integration.</p>
+    <h2>Revoke authorization</h2>
+    <ol>
+      <li>Sign in to QuickBooks Online with an account authorized to manage app connections for the intended company.</li>
+      <li>Open the app-management area, commonly labeled <strong>Apps</strong>, <strong>My apps</strong>, or <strong>Connected apps</strong>. Labels may vary by QuickBooks layout.</li>
+      <li>Find the developer app used for your AR connection. Its displayed name may differ from “AR”; confirm the correct app with the Operator if unsure.</li>
+      <li>Choose the disconnect or remove-connection action, complete any confirmation, and verify the connection is no longer active in QuickBooks.</li>
+    </ol>
+    <p>If you arrived here after disconnecting in QuickBooks, use QuickBooks' connection status to confirm the result. This static page cannot inspect your account.</p>
+    <h2>Local credentials and records</h2>
+    <p>Ask the Operator to stop local synchronization and remove any no-longer-needed local credentials. Removing a credential from the local tool alone is not a substitute for revoking authorization with Intuit.</p>
+    <p>Disconnecting does not delete accounting records in QuickBooks or automatically erase downloaded records, local notes, summaries, or backups. Coordinate any local removal with the Operator, taking applicable business recordkeeping obligations into account. See the Privacy Policy for retention and deletion information.</p>
+    <h2>Connect again</h2>
+    <p>Reconnection requires a new authorization flow. Follow the <a href="/connect.html">connect/reconnect guidance</a> when you are ready.</p>
+    <footer><a href="/">License Agreement</a> · <a href="/privacy.html">Privacy Policy</a></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="Guidance for authorized users connecting or reconnecting AR to QuickBooks Online.">
+  <title>AR — Connect or Reconnect</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.65; }
+    body { margin: 0; background: #fafaf8; color: #242824; }
+    main { max-width: 740px; margin: 0 auto; padding: 64px 24px 80px; }
+    .brand { font-size: .85rem; font-weight: 700; letter-spacing: .16em; color: #426047; }
+    h1 { line-height: 1.2; font-size: clamp(2rem, 6vw, 3rem); }
+    h2 { font-size: 1.15rem; margin-top: 32px; }
+    a { color: #315d3c; text-underline-offset: .2em; }
+    footer { margin-top: 48px; border-top: 1px solid #cbd2c9; padding-top: 20px; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #171b18; color: #e6ebe5; }
+      .brand, a { color: #a9cfaf; }
+      footer { border-color: #3d493f; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">AR / DAVIDSON.LLC</div>
+    <h1>Connect or reconnect</h1>
+    <p>Connecting AR requires your explicit authorization through Intuit. This page provides instructions only: it does not start OAuth, collect credentials, or receive authorization callbacks.</p>
+    <h2>Setup status</h2>
+    <p>AR is under development. Production credentials and the local HTTPS callback must be configured and verified by the Operator before the intended desktop authorization flow can be used. There is no public self-service connection flow yet.</p>
+    <h2>Authorization workflow</h2>
+    <ol>
+      <li>Contact the Operator through your existing business contact channel to confirm that your local integration setup is ready.</li>
+      <li>On the computer running the configured local tool, start its authorization flow. For the research CLI, the command is <code>qbo-research auth login</code>; run it only after credentials and a supported redirect flow are configured.</li>
+      <li>Open the Intuit authorization link supplied by that tool, sign in on Intuit's website, and select the intended company. Authorize only an account you are permitted to access.</li>
+      <li>Complete the configured callback flow and return to the local tool to verify the company and connection status. If consent is denied or the flow fails, no success should be assumed.</li>
+    </ol>
+    <p>To reconnect after access expires or is revoked, repeat the configured local authorization flow. Do not use an old authorization link.</p>
+    <h2>Keep credentials private</h2>
+    <p>Do not enter your QuickBooks password on this website or post secrets, tokens, or callback URLs in chat or public issues. An authorization callback URL can contain a sensitive, temporary code.</p>
+    <p><a href="/launch.html">Application availability</a> · <a href="/disconnect.html">Revoke a connection</a></p>
+    <footer><a href="/">License Agreement</a> · <a href="/privacy.html">Privacy Policy</a></footer>
+  </main>
+</body>
+</html>
